@@ -1,0 +1,13 @@
+services:
+  go:
+    container_name: golang
+    image: golang:alpine
+    stdin_open: true
+    tty: true
+    volumes:
+      - $PWD/:/root/my-app
+    working_dir: /root/my-app
+    networks:
+      - net
+networks:
+  net:
